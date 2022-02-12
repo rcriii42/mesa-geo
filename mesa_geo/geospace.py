@@ -104,7 +104,7 @@ class GeoSpace:
         set center=True to calculate distance from center.
         """
         if center:
-            shape = agent.shape.center().buffer(distance)
+            shape = agent.shape.centroid.buffer(distance)
         else:
             shape = agent.shape.buffer(distance)
         possible_neighbors = self._get_rtree_intersections(shape)
