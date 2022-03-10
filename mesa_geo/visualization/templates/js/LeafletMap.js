@@ -10,8 +10,9 @@ var MapModule = function (view, zoom, map_width, map_height) {
   var AgentLayer = L.geoJSON().addTo(Lmap)
 
   // create the OSM tile layer with correct attribution
-  var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-  var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  // var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+  var osmUrl = 'https://tileservice.charts.noaa.gov/tiles/50000_1/{z}/{x}/{y}.png'
+  var osmAttrib = 'Map data © <a href="https://tileservice.charts.noaa.gov">NOAA</a>'
   var osm = new L.TileLayer(osmUrl, { minZoom: 0, maxZoom: 18, attribution: osmAttrib })
   Lmap.addLayer(osm)
 
